@@ -7,10 +7,27 @@ import Button from './Button';
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
+
+      // Section active detection
+      const sections = ['how-it-works', 'terms', 'benefits', 'security', 'about'];
+      const scrollPosition = window.scrollY + 120;
+
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -18,10 +35,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'Benefits', href: '#benefits' },
-    { label: 'Security', href: '#security' },
-    { label: 'About', href: '#about' },
+    { label: 'How It Works', href: '#how-it-works', id: 'how-it-works' },
+    { label: 'Terms', href: '#terms', id: 'terms' },
+    { label: 'Benefits', href: '#benefits', id: 'benefits' },
+    { label: 'Security', href: '#security', id: 'security' },
+    { label: 'About', href: '#about', id: 'about' },
   ];
 
   return (
@@ -45,18 +63,25 @@ export default function Navbar() {
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="relative text-sm font-medium text-[#6E6E73] hover:text-[#0071E3] transition-colors duration-200 py-1 group"
-            >
-              {link.label}
-              <motion.span
-                className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#0071E3] rounded-full group-hover:w-full transition-all duration-200 ease-out"
-              />
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.id;
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                className={`relative text-sm font-medium transition-colors duration-200 py-1 group ${
+                  isActive ? 'text-[#0071E3]' : 'text-[#6E6E73] hover:text-[#0071E3]'
+                }`}
+              >
+                {link.label}
+                <motion.span
+                  className={`absolute bottom-0 left-0 h-[2px] bg-[#0071E3] rounded-full transition-all duration-200 ease-out ${
+                    isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}
+                />
+              </a>
+            );
+          })}
         </nav>
 
         {/* Desktop Get Started Button */}
@@ -92,16 +117,21 @@ export default function Navbar() {
           >
             <Container className="py-6 flex flex-col gap-5">
               <nav className="flex flex-col gap-4">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-base font-medium text-[#1D1D1F] hover:text-[#0071E3] transition-colors py-1"
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {navLinks.map((link) => {
+                  const isActive = activeSection === link.id;
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`text-base font-medium py-1 transition-colors ${
+                        isActive ? 'text-[#0071E3] font-semibold' : 'text-[#1D1D1F] hover:text-[#0071E3]'
+                      }`}
+                    >
+                      {link.label}
+                    </a>
+                  );
+                })}
               </nav>
 
               <div className="pt-2 border-t border-[#E5E5E7]">

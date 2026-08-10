@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import { HeroSection, FeaturesSection } from './sections';
+import { HeroSection, FeaturesSection, TermsSection } from './sections';
 
 export default function App() {
   return (
@@ -15,6 +15,9 @@ export default function App() {
 
         {/* Minimal Apple Trust / Features Section */}
         <FeaturesSection />
+
+        {/* Official Terms & Conditions Section (#terms) */}
+        <TermsSection />
       </main>
     </div>
   );
