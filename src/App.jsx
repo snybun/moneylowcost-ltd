@@ -1,12 +1,13 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import { 
   HeroSection, 
   FeaturesSection, 
   HowItWorksSection, 
   TermsSection,
   BenefitsSection, 
-  SecuritySection,
+  ContactSection,
   CtaSection
 } from './sections';
 
@@ -27,18 +28,21 @@ export default function App() {
         {/* Apple Timeline How It Works Section (#how-it-works) */}
         <HowItWorksSection />
 
-        {/* Official Terms & Conditions Section (#terms) - Matched to Navbar Order */}
+        {/* Official Terms & Conditions Section (#terms) */}
         <TermsSection />
 
         {/* Apple Bento Grid Customer Benefits Section (#benefits) */}
         <BenefitsSection />
 
-        {/* Clean Apple Security Section (#security) */}
-        <SecuritySection />
+        {/* Apple UI Contact Us Section (#contact) */}
+        <ContactSection />
 
         {/* Apple Product Closing CTA Section (#cta) */}
         <CtaSection />
       </main>
+
+      {/* Minimalist Apple Footer */}
+      <Footer />
     </div>
   );
 }
