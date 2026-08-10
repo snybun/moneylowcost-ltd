@@ -4,9 +4,10 @@ import {
   HeroSection, 
   FeaturesSection, 
   HowItWorksSection, 
+  TermsSection,
   BenefitsSection, 
   SecuritySection,
-  TermsSection 
+  CtaSection
 } from './sections';
 
 export default function App() {
@@ -26,14 +27,17 @@ export default function App() {
         {/* Apple Timeline How It Works Section (#how-it-works) */}
         <HowItWorksSection />
 
+        {/* Official Terms & Conditions Section (#terms) - Matched to Navbar Order */}
+        <TermsSection />
+
         {/* Apple Bento Grid Customer Benefits Section (#benefits) */}
         <BenefitsSection />
 
         {/* Clean Apple Security Section (#security) */}
         <SecuritySection />
 
-        {/* Official Terms & Conditions Section (#terms) */}
-        <TermsSection />
+        {/* Apple Product Closing CTA Section (#cta) */}
+        <CtaSection />
       </main>
     </div>
   );
