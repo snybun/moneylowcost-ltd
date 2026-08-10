@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import { HeroSection } from './sections';
+import { HeroSection, FeaturesSection } from './sections';
 
 export default function App() {
   return (
@@ -8,10 +8,13 @@ export default function App() {
       {/* Sticky Apple Navbar */}
       <Navbar />
 
-      {/* Main Content Area */}
+      {/* Main Sections */}
       <main>
         {/* Apple-Inspired Fintech Hero Section */}
         <HeroSection />
+
+        {/* Minimal Apple Trust / Features Section */}
+        <FeaturesSection />
       </main>
     </div>
   );
