@@ -1,6 +1,12 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import { HeroSection, FeaturesSection, HowItWorksSection, TermsSection } from './sections';
+import { 
+  HeroSection, 
+  FeaturesSection, 
+  HowItWorksSection, 
+  BenefitsSection, 
+  TermsSection 
+} from './sections';
 
 export default function App() {
   return (
@@ -18,6 +24,9 @@ export default function App() {
 
         {/* Apple Timeline How It Works Section (#how-it-works) */}
         <HowItWorksSection />
+
+        {/* Apple Bento Grid Customer Benefits Section (#benefits) */}
+        <BenefitsSection />
 
         {/* Official Terms & Conditions Section (#terms) */}
         <TermsSection />
