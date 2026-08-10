@@ -5,6 +5,7 @@ import {
   FeaturesSection, 
   HowItWorksSection, 
   BenefitsSection, 
+  SecuritySection,
   TermsSection 
 } from './sections';
 
@@ -27,6 +28,9 @@ export default function App() {
 
         {/* Apple Bento Grid Customer Benefits Section (#benefits) */}
         <BenefitsSection />
+
+        {/* Clean Apple Security Section (#security) */}
+        <SecuritySection />
 
         {/* Official Terms & Conditions Section (#terms) */}
         <TermsSection />
