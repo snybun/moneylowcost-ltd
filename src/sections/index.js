@@ -1,2 +1,1 @@
-// Export sections once built in upcoming steps
-export {};
+export { default as HeroSection } from './HeroSection';
