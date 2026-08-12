@@ -14,7 +14,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 10);
 
       // Section active detection
-      const sections = ['how-it-works', 'about', 'benefits', 'terms', 'contact'];
+      const sections = ['how-it-works', 'benefits', 'terms', 'contact', 'about'];
       const scrollPosition = window.scrollY + 120;
 
       for (const sectionId of sections) {
@@ -36,10 +36,10 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'How It Works', href: '#how-it-works', id: 'how-it-works' },
-    { label: 'About', href: '#about', id: 'about' },
     { label: 'Benefits', href: '#benefits', id: 'benefits' },
     { label: 'Terms', href: '#terms', id: 'terms' },
     { label: 'Contact Us', href: '#contact', id: 'contact' },
+    { label: 'About Us', href: '#about', id: 'about' },
   ];
 
   return (

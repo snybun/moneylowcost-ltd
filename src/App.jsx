@@ -29,17 +29,17 @@ export default function App() {
         {/* Apple Timeline How It Works Section (#how-it-works) */}
         <HowItWorksSection />
 
-        {/* Apple-Designed About Us Section (#about) */}
-        <AboutSection />
+        {/* Apple Bento Grid Customer Benefits Section (#benefits) */}
+        <BenefitsSection />
 
         {/* Official Terms & Conditions Section (#terms) */}
         <TermsSection />
 
-        {/* Apple Bento Grid Customer Benefits Section (#benefits) */}
-        <BenefitsSection />
-
         {/* Apple UI Contact Us Section (#contact) */}
         <ContactSection />
+
+        {/* Apple-Designed About Us Section (#about) */}
+        <AboutSection />
 
         {/* Apple Product Closing CTA Section (#cta) */}
         <CtaSection />
