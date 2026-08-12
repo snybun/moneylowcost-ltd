@@ -5,6 +5,7 @@ import {
   HeroSection, 
   FeaturesSection, 
   HowItWorksSection, 
+  AboutSection,
   TermsSection,
   BenefitsSection, 
   ContactSection,
@@ -27,6 +28,9 @@ export default function App() {
 
         {/* Apple Timeline How It Works Section (#how-it-works) */}
         <HowItWorksSection />
+
+        {/* Apple-Designed About Us Section (#about) */}
+        <AboutSection />
 
         {/* Official Terms & Conditions Section (#terms) */}
         <TermsSection />

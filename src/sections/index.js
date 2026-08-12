@@ -4,4 +4,6 @@ export { default as HowItWorksSection } from './HowItWorksSection';
 export { default as BenefitsSection } from './BenefitsSection';
 export { default as ContactSection } from './ContactSection';
 export { default as TermsSection } from './TermsSection';
+export { default as AboutSection } from './AboutSection';
 export { default as CtaSection } from './CtaSection';
+

@@ -59,7 +59,7 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2.5 text-xs font-medium">
                 <li>
-                  <a href="#contact" className="hover:text-[#0071E3] transition-colors duration-200">
+                  <a href="#about" className="hover:text-[#0071E3] transition-colors duration-200">
                     About
                   </a>
                 </li>
