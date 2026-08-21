@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { PhoneCall, MapPin, Mail, Send, CheckCircle2, Clock } from 'lucide-react';
 import Container from '../components/Container';
 import Button from '../components/Button';
+import { Parallax, ParallaxGlow, ParallaxTilt } from '../components/Parallax';
 
 export default function ContactSection() {
+  const sectionRef = useRef(null);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -30,8 +32,26 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-[#FFFFFF] py-24 md:py-36 border-b border-[#E5E5E7] relative overflow-hidden">
-      <Container>
+    <section 
+      id="contact" 
+      ref={sectionRef}
+      className="bg-[#FFFFFF] py-24 md:py-36 border-b border-[#E5E5E7] relative overflow-hidden"
+    >
+      {/* Parallax Ambient Glow */}
+      <ParallaxGlow
+        color="from-[#0071E3]/10 via-[#34C759]/8 to-transparent"
+        size="w-[600px] h-[600px]"
+        speed={-0.15}
+        className="top-1/3 -right-24"
+      />
+      <ParallaxGlow
+        color="from-[#34C759]/10 via-[#0071E3]/8 to-transparent"
+        size="w-[500px] h-[500px]"
+        speed={0.2}
+        className="bottom-10 -left-20"
+      />
+
+      <Container className="relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
