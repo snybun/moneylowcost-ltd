@@ -298,26 +298,6 @@ export default function AboutSection() {
                   </ParallaxTilt>
                 </Parallax>
               );
-            })}
-          </motion.div>
-        </div>-6 h-6 ${pillar.accent}`} />
-                      </div>
-                      <span className="text-[10px] font-bold tracking-widest text-[#6E6E73] uppercase bg-[#F5F5F7] px-2.5 py-1 rounded-full border border-[#E5E5E7]">
-                        {pillar.badge}
-                      </span>
-                    </div>
-
-                    <h4 className="text-lg font-bold text-[#1D1D1F] mb-2">
-                      {pillar.title}
-                    </h4>
-
-                    <p className="text-xs sm:text-sm text-[#6E6E73] leading-relaxed">
-                      {pillar.desc}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
           </motion.div>
         </div>
 
