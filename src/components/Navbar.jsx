@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Container from './Container';
 import Button from './Button';
+import { ScrollProgressBar } from './Parallax';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -50,6 +51,7 @@ export default function Navbar() {
           : 'bg-[#FFFFFF]/60 backdrop-blur-md border-b border-transparent py-4'
       }`}
     >
+      <ScrollProgressBar />
       <Container className="flex items-center justify-between">
         {/* Money Low Cost Logo */}
         <a href="#" className="flex items-center gap-2 group text-decoration-none">
