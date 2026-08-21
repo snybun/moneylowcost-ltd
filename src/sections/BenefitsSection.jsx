@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { HeartPulse, Smartphone, Eye, Compass, ArrowUpRight, Sparkles } from 'lucide-react';
+import { HeartPulse, Smartphone, Eye, Compass, ArrowUpRight } from 'lucide-react';
 import Container from '../components/Container';
 import { Parallax, ParallaxGlow, ParallaxTilt } from '../components/Parallax';
 

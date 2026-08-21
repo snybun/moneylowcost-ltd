@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Zap, ShieldCheck, Heart, Sparkles } from 'lucide-react';
+import { Zap, ShieldCheck, Heart } from 'lucide-react';
 import Container from '../components/Container';
 import { Parallax, ParallaxGlow, ParallaxTilt } from '../components/Parallax';
 

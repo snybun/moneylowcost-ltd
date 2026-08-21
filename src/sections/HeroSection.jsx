@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { ShieldCheck, CheckCircle2, Lock, Check, Zap, Sparkles, TrendingUp, Globe } from 'lucide-react';
+import { ShieldCheck, CheckCircle2, Lock, Check, Zap, TrendingUp } from 'lucide-react';
 import Container from '../components/Container';
 import Button from '../components/Button';
 import { ParallaxFloat, ParallaxGlow, ParallaxTilt } from '../components/Parallax';

@@ -12,33 +12,33 @@ import {
   RotateCcw, 
   PhoneCall, 
   Building2,
-  ChevronRight,
   AlertCircle
 } from 'lucide-react';
 import Container from '../components/Container';
+import { ParallaxGlow } from '../components/Parallax';
+
+const LEGAL_SECTIONS = [
+  { id: 'sec-1', number: '01', title: 'General Terms', icon: FileText },
+  { id: 'sec-2', number: '02', title: 'Intellectual Property', icon: ShieldCheck },
+  { id: 'sec-3', number: '03', title: 'Disclaimer of Warranty', icon: Scale },
+  { id: 'sec-4', number: '04', title: 'Limitation of Liability', icon: Lock },
+  { id: 'sec-5', number: '05', title: 'Indemnification', icon: ShieldCheck },
+  { id: 'sec-6', number: '06', title: 'Law and Jurisdiction', icon: Building2 },
+  { id: 'sec-7', number: '07', title: 'Links to Third Party', icon: ExternalLink },
+  { id: 'sec-8', number: '08', title: "Customer's Account", icon: UserCheck },
+  { id: 'sec-9', number: '09', title: "Credit Policy", icon: CreditCard },
+  { id: 'sec-10', number: '10', title: 'Privacy', icon: Eye },
+  { id: 'sec-11', number: '11', title: 'Changes', icon: RotateCcw },
+  { id: 'sec-12', number: '12', title: 'Contact Details', icon: PhoneCall },
+];
 
 export default function TermsSection() {
   const [activeTab, setActiveTab] = useState('sec-1');
 
-  const legalSections = [
-    { id: 'sec-1', number: '01', title: 'General Terms', icon: FileText },
-    { id: 'sec-2', number: '02', title: 'Intellectual Property', icon: ShieldCheck },
-    { id: 'sec-3', number: '03', title: 'Disclaimer of Warranty', icon: Scale },
-    { id: 'sec-4', number: '04', title: 'Limitation of Liability', icon: Lock },
-    { id: 'sec-5', number: '05', title: 'Indemnification', icon: ShieldCheck },
-    { id: 'sec-6', number: '06', title: 'Law and Jurisdiction', icon: Building2 },
-    { id: 'sec-7', number: '07', title: 'Links to Third Party', icon: ExternalLink },
-    { id: 'sec-8', number: '08', title: "Customer's Account", icon: UserCheck },
-    { id: 'sec-9', number: '09', title: "Credit Policy", icon: CreditCard },
-    { id: 'sec-10', number: '10', title: 'Privacy', icon: Eye },
-    { id: 'sec-11', number: '11', title: 'Changes', icon: RotateCcw },
-    { id: 'sec-12', number: '12', title: 'Contact Details', icon: PhoneCall },
-  ];
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPos = window.scrollY + 180;
-      for (const section of legalSections) {
+      for (const section of LEGAL_SECTIONS) {
         const el = document.getElementById(section.id);
         if (el) {
           const top = el.offsetTop;
