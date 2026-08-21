@@ -298,6 +298,7 @@ export default function AboutSection() {
                   </ParallaxTilt>
                 </Parallax>
               );
+            })}
           </motion.div>
         </div>
 

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { UserPlus, UserCheck, Send, CheckCircle2 } from 'lucide-react';
 import Container from '../components/Container';
 import { Parallax, ParallaxGlow, ParallaxTilt } from '../components/Parallax';

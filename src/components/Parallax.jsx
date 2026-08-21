@@ -12,9 +12,12 @@ export function Parallax({
   children,
   speed = 0.2,
   direction = 'vertical',
-  scaleRange = null,
-  opacityRange = null,
-  rotateRange = null,
+  scaleRange = [1, 1, 1],
+  opacityRange = [1, 1, 1, 1],
+  rotateRange = [0, 0],
+  enableScale = false,
+  enableOpacity = false,
+  enableRotate = false,
   offset = ['start end', 'end start'],
   className = '',
   style = {},
@@ -39,17 +42,17 @@ export function Parallax({
   const y = useTransform(smoothProgress, [0, 1], [maxDistance, -maxDistance]);
   const x = useTransform(smoothProgress, [0, 1], [maxDistance, -maxDistance]);
 
-  const scale = scaleRange ? useTransform(smoothProgress, [0, 0.5, 1], scaleRange) : undefined;
-  const opacity = opacityRange ? useTransform(smoothProgress, [0, 0.2, 0.8, 1], opacityRange) : undefined;
-  const rotate = rotateRange ? useTransform(smoothProgress, [0, 1], rotateRange) : undefined;
+  const scale = useTransform(smoothProgress, [0, 0.5, 1], scaleRange);
+  const opacity = useTransform(smoothProgress, [0, 0.2, 0.8, 1], opacityRange);
+  const rotate = useTransform(smoothProgress, [0, 1], rotateRange);
 
   const motionStyles = {
     ...(direction === 'vertical' ? { y } : {}),
     ...(direction === 'horizontal' ? { x } : {}),
     ...(direction === 'both' ? { x, y } : {}),
-    ...(scale ? { scale } : {}),
-    ...(opacity ? { opacity } : {}),
-    ...(rotate ? { rotate } : {}),
+    ...(enableScale ? { scale } : {}),
+    ...(enableOpacity ? { opacity } : {}),
+    ...(enableRotate ? { rotate } : {}),
     ...style,
   };
 
